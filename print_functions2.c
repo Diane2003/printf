@@ -6,9 +6,9 @@
  * @types: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
- * @width: get width
+ * @width: gets width
  * @precision: Precision specification
- * @size: Size specifier
+ * @size: Size specifiers
  * Return: Number of chars printed.
  */
 int print_pointer(va_list types, char buffer[],
@@ -82,7 +82,7 @@ int print_non_printable(va_list types, char buffer[],
 		if (is_printable(str[i]))
 			buffer[i + offset] = str[i];
 		else
-			offset += append_hexa_code(str[i], buffer, i + offset);
+			offset  += append_hexa_code(str[i], buffer, i + offset);
 
 		i++;
 	}
